@@ -24,27 +24,27 @@ export function searchMovies(searchText) {
 
 export function searchActiveOverlay() {
   return dispatch => {
-      dispatch({
-        type: "ACTIVE_SEARCH_OVERLAY",
-        payload: "true"
-      });
+    dispatch({
+      type: "ACTIVE_SEARCH_OVERLAY",
+      payload: "true"
+    });
   }
 }
 
 export function searchDisableOverlay() {
   return dispatch => {
-      dispatch({
-        type: "DISABLED_SEARCH_OVERLAY",
-        payload: "false"
-      });
+    dispatch({
+      type: "DISABLED_SEARCH_OVERLAY",
+      payload: "false"
+    });
   }
 }
 
 
 export function searchListClear() {
   return dispatch => {
-      dispatch({
-        type: "SEARCH_LIST_CLEAR",
-      });
+    dispatch({
+      type: "SEARCH_LIST_CLEAR",
+    });
   }
 }

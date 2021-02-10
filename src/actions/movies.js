@@ -1,11 +1,11 @@
 import axios from 'axios'
 const BASE_URL = process.env.REACT_APP_API_URL
-export function fetchMovies() { 
+export function fetchMovies() {
   return async dispatch => {
     await axios.get(`${BASE_URL}/movies`).then(value => {
       dispatch({
         type: "FETCH_MOVIES",
-        payload : value.data,
+        payload: value.data,
       });
     });
   };

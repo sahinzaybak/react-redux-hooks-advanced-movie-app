@@ -2,7 +2,7 @@ import axios from 'axios'
 const BASE_URL = process.env.REACT_APP_API_URL
 export function fetchGames() {
   return async dispatch => {
-   await axios.get(`${BASE_URL}/games`).then(value => {
+    await axios.get(`${BASE_URL}/games`).then(value => {
       dispatch({
         type: "FETCH_GAMES",
         payload: value.data,
@@ -72,9 +72,9 @@ export function editGames(gameInfo) {
 
 export function clearDetail() {
   return dispatch => {
-      dispatch({
-        type: "CLEAR_DETAIL",
-        payload: true
-      });
+    dispatch({
+      type: "CLEAR_DETAIL",
+      payload: true
+    });
   }
 }
