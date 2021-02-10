@@ -21,7 +21,7 @@ class moviesPage extends PureComponent {
     return (
       <div>
         <div className={`search-overlay ${this.props.boolSearchOverlay == "true" ? "active" : ""}`} onClick={this.closeOverlay}></div>
-        <div className="custom-container">
+        <div className="custom-container product">
           <GameList games={this.props.games} />
           <MovieList movies={this.props.movies} />
         </div>

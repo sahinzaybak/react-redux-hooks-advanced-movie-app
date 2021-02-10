@@ -134,6 +134,11 @@ label {
   width: 95%;
   margin: 0 auto;
   z-index: 99;
+  &.product{
+    @media (max-width: 600px) {
+      overflow: hidden;
+    }
+  }
 }
 
 .cursor-pointer {
@@ -142,11 +147,8 @@ label {
 
 .custom-switch {
   @media (max-width: 600px) {
-    font-size: 11px;
-    margin-left: 16px;
-    display: flex;
+    display: none;
   }
-
 }
 
 .dark {
@@ -232,7 +234,11 @@ label {
   left: -4%;
   transform: translateY(-40%);
   @media (max-width: 650px) {
-    display: none;
+    top: -68px;
+    position: absolute;
+    left: 0;
+    transform: none;
+    overflow: hidden;
   }
 }
 

@@ -14,16 +14,19 @@ return (
       <Link to="/add/game" className="movie-add green">Oyun Ekle</Link>
     </div>
 
-  {games.gameList.length == 0 &&
-    <div className="d-flex">
-      {[...Array(6)].map((x, i) =>
-        <ContentLoader viewBox="0 0 500 880" key={i}>
-          <rect x="3" y="3" rx="30" ry="30" width="460" height="700" />
-          <rect x="6" y="760" rx="0" ry="0" width="292" height="20" />
-       </ContentLoader>
-      )}
-    </div>
-  }
+    {games.gameList.length == 0 &&
+      <div className="row">
+        {[...Array(6)].map((x, i) =>
+        <div className="col-6 col-md-2" key={i}>
+          <ContentLoader viewBox="0 0 500 880" key={i}>
+            <rect x="3" y="3" rx="30" ry="30" width="460" height="740" />
+            <rect x="6" y="780" rx="0" ry="0" width="292" height="20" />
+          </ContentLoader>
+        </div>
+        
+        )}
+      </div>
+    }
 
     <div className="row">
     {games.gameList.map(game => 

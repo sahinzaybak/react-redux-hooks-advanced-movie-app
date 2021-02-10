@@ -81,6 +81,9 @@
         transition: all .8s ease;
         transform: scale(1);
       }
+      @media (max-width: 650px) {
+        margin-top: 10px;
+      }
     }
 
     &__title {
