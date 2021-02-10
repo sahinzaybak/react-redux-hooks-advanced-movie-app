@@ -23,7 +23,6 @@ return (
             <rect x="6" y="780" rx="0" ry="0" width="292" height="20" />
           </ContentLoader>
         </div>
-        
         )}
       </div>
     }

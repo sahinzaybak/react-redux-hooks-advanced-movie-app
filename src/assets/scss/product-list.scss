@@ -31,9 +31,18 @@
       font-weight: 600;
       width: 100px;
       margin-left: auto;
+      transition: all .3s;
+      &:hover{
+        background-color: #7dad1f;
+        color:white;
+      }
 
       &.yellow {
         background-color: #ea8835;
+        &:hover{
+          background-color: #d0762a;
+          color:white;
+        }
       }
     }
 
@@ -100,6 +109,7 @@
     color: white;
     text-align: center;
     z-index: 999;
+    transition: all .3s;
     cursor: pointer;
 
     @media (max-width: 768px) {
@@ -110,10 +120,18 @@
 
     &.green {
       background-color: #94cc26;
+      &:hover{
+        background-color: #7dad1f;
+        color:white;
+      }
     }
 
     &.yellow {
       background-color: #ea8835;
+      &:hover{
+        background-color: #d0762a;
+        color:white;
+      }
     }
   }
 
