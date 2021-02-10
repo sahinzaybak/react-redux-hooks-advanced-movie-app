@@ -1,7 +1,8 @@
 import axios from 'axios'
+const BASE_URL = process.env.REACT_APP_API_URL
 export function fetchMovies() { 
   return async dispatch => {
-    await axios.get("https://6016a17df534300017a44ca3.mockapi.io/movies").then(value => {
+    await axios.get(`${BASE_URL}/movies`).then(value => {
       dispatch({
         type: "FETCH_MOVIES",
         payload : value.data,
@@ -12,7 +13,7 @@ export function fetchMovies() {
 
 export function saveMovie(newMovieInfo) {
   return async dispatch => {
-    await axios.post("https://6016a17df534300017a44ca3.mockapi.io/movies", {
+    await axios.post(`${BASE_URL}/movies`, {
       name: newMovieInfo._name,
       title: newMovieInfo._title,
       category: newMovieInfo._category,
@@ -38,7 +39,7 @@ export function saveMovie(newMovieInfo) {
 
 export function editMovie(movieInfo) {
   return async dispatch => {
-    await axios.put(`https://6016a17df534300017a44ca3.mockapi.io/${movieInfo._platform}/${movieInfo._id}`, {
+    await axios.put(`${BASE_URL}/${movieInfo._platform}/${movieInfo._id}`, {
       name: movieInfo._name,
       title: movieInfo._title,
       category: movieInfo._category,

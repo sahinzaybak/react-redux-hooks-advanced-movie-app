@@ -1,7 +1,8 @@
 import axios from 'axios'
+const BASE_URL = process.env.REACT_APP_API_URL
 export function searchGames(searchText) {
   return async dispatch => {
-    await axios.get(`https://6016a17df534300017a44ca3.mockapi.io/games?name=${searchText}`).then(value => {
+    await axios.get(`${BASE_URL}/games?name=${searchText}`).then(value => {
       dispatch({
         type: "SEARCH_GAME_RESULT",
         payload: value.data
@@ -12,7 +13,7 @@ export function searchGames(searchText) {
 
 export function searchMovies(searchText) {
   return async dispatch => {
-    await axios.get(`https://6016a17df534300017a44ca3.mockapi.io/movies?name=${searchText}`).then(value => {
+    await axios.get(`${BASE_URL}/movies?name=${searchText}`).then(value => {
       dispatch({
         type: "SEARCH_MOVIE_RESULT",
         payload: value.data

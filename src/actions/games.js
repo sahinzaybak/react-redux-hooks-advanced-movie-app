@@ -1,7 +1,8 @@
 import axios from 'axios'
+const BASE_URL = process.env.REACT_APP_API_URL
 export function fetchGames() {
   return async dispatch => {
-   await axios.get("https://6016a17df534300017a44ca3.mockapi.io/games").then(value => {
+   await axios.get(`${BASE_URL}/games`).then(value => {
       dispatch({
         type: "FETCH_GAMES",
         payload: value.data,
@@ -12,7 +13,7 @@ export function fetchGames() {
 
 export function detail(platform, slug) {
   return async dispatch => {
-    await axios.get(`https://6016a17df534300017a44ca3.mockapi.io/${platform}?slug=${slug}`).then(value => {
+    await axios.get(`${BASE_URL}/${platform}?slug=${slug}`).then(value => {
       dispatch({
         type: "SET_DETAIL",
         payload: value.data[0],
@@ -23,7 +24,7 @@ export function detail(platform, slug) {
 
 export function saveGames(newGameInfo) {
   return async dispatch => {
-    await axios.post("https://6016a17df534300017a44ca3.mockapi.io/games", {
+    await axios.post(`${BASE_URL}/games`, {
       name: newGameInfo._name,
       title: newGameInfo._title,
       category: newGameInfo._category,
@@ -47,7 +48,7 @@ export function saveGames(newGameInfo) {
 
 export function editGames(gameInfo) {
   return async dispatch => {
-    await axios.put(`https://6016a17df534300017a44ca3.mockapi.io/${gameInfo._platform}/${gameInfo._id}`, {
+    await axios.put(`${BASE_URL}/${gameInfo._platform}/${gameInfo._id}`, {
       name: gameInfo._name,
       title: gameInfo._title,
       category: gameInfo._category,
