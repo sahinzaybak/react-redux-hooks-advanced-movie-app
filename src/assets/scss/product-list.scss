@@ -1,0 +1,149 @@
+.movie {
+  &-create {
+    &__item {
+      margin-bottom: 20px;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 9px 14px;
+        border-radius: 5px;
+        border: 0;
+        border: 1px solid #313131;
+        background-color: transparent;
+        color: #c7c7c7;
+        font-size: 15px;
+        font-weight: 100;
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__button {
+      border: 0;
+      padding: 8px 12px;
+      border-radius: 5px;
+      background-color: #94cc26;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      width: 100px;
+      margin-left: auto;
+
+      &.yellow {
+        background-color: #ea8835;
+      }
+    }
+
+    &.edit {
+      .movie-create__item {
+        input {
+          border: 1px solid #3e3e3e;
+          background-color: #ffffff14;
+          color: white;
+        }
+      }
+    }
+
+    &__form {
+      p {
+        font-size: 15px;
+        color: #6f824a;
+        margin-bottom: 5px;
+        font-weight: 400;
+        @media (max-width: 650px) {
+          font-size: 10px;
+        }
+      }
+
+      &.movie {
+        p {
+          color: #968136;
+        }
+      }
+    }
+
+    &__backdrop {
+      position: absolute;
+      height: 100vh;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &.page {
+      .movie-create__form{
+        background-color: #080808ba;
+        padding: 20px 35px;
+        border-radius: 9px;
+        @media (max-width: 650px) {
+          padding: 0;
+          background-color: transparent;
+        }
+      }
+      .movie-create__item {
+        input,
+        textarea {
+          border: 1px solid #585858;
+        }
+      }
+    }
+  }
+
+  &-add {
+    position: relative;
+    padding: 6px 24px;
+    border-radius: 9px;
+    color: white;
+    text-align: center;
+    z-index: 999;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+      max-width: 146px;
+      flex-shrink: 0;
+    }
+
+    &.green {
+      background-color: #94cc26;
+    }
+
+    &.yellow {
+      background-color: #ea8835;
+    }
+  }
+
+  &-item {
+    &__img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px #0000001a;
+      border-radius: 12px;
+    }
+
+    &__name {
+      color: black;
+      font-size: 16px;
+      font-weight: 700;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+
+  .CircularProgressbar {
+    width: 40px;
+    margin-top: -30px;
+
+    &-text {
+      font-weight: 600;
+    }
+
+    &-path {
+      stroke: #21d07a;
+    }
+  }
+}

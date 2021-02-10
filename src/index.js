@@ -1,13 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals'
 
+import { createStore, applyMiddleware } from 'redux';
+import { createLogger } from 'redux-logger'
+import thunk from 'redux-thunk'
+import { createPromise } from 'redux-promise-middleware'
+
+import rootReducer from './reducers/rootReducer';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import Header from './layout/header.jsx';
+
+const store = createStore(
+	rootReducer,
+	applyMiddleware(createPromise(), thunk, createLogger())
+);
+
+// + Provider: 
+// - Tüm Redux ın projemizde dahil olabilmesi için oluşturmuş olduğumuz Provider özelliğini App Componenti dışına ekliyoruz. 
+// - Ayrıca oluşturmuş olduğumuz store un her yere ulaşabilmesi için Provider yapısına store ekliyoruz.
+
+// + Router yapısı: Tüm projenin router'ı görebilmesi için bu kısımda provider üzerinde sarmaladık.
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <BrowserRouter> 
+      <Provider store={store}> 
+        <Header />
+        <App />
+      </Provider>
+    </BrowserRouter>,
   document.getElementById('root')
 );
 
