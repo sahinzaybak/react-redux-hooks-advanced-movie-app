@@ -1,5 +1,6 @@
 # REACT- REDUX MOVIE APP
-Benim kendi girişimim olan ve kodlama aşamalarına halen devam ettiğim projem..  Sadece üniversite öğrencilerin iş yaparak para kazanabilecekleri komisyon usulü bir sistem geliştirmekteyim. . Bu sistemde FrontEnd tarafında VUEJS/VUEX ve SSR için NUXJS kullanmayı tercih ettim. Backend REST API kısmını Node.js kullanarak hazırlıyorum, veritabanı olarak çok sevdiğim MongoDB'yi tercih ettim. Onunda kodlarını github repository'lerimde bulabilirsiniz.. Dediğim gibi halen geliştirme aşamasında olduğum için şu an ki mevcut kodlarda bile ileride değişiklik olacaktır..
+React ile yaptığım ilk proje. Açıkçası VueJs bilgim olduğu için React't geçişte çok zorlanmadım, öyle herkesin dediği gibi karışık bir yapısı yokmuş aslında. Syntax farklılığı ve az da  olsa mantığı biraz değişik gelsede yine de sevdim, kolay adapte oldum. Klasik movie app'lerden daha çok, tasarımı özgün, yaratıcı ve animasyonlarla süslediğim güzel bir proje oldu. İlk projem olduğu için bazı yerlerde açıklama satırları bıraktım. 
+
 
 ## Build Setup
 
@@ -8,11 +9,8 @@ Benim kendi girişimim olan ve kodlama aşamalarına halen devam ettiğim projem
 $ npm install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
+$ npm start
+```
 
 <br>
 <div align="center">
@@ -20,3 +18,4 @@ $ npm run start
   <h3><i>Developer by Şahin ZAYBAK </i></h3>
   <hr/>
 </div>
+
