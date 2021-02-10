@@ -1,7 +1,7 @@
 import axios from 'axios'
 export function fetchMovies() { 
-  return dispatch => {
-     axios.get("https://6016a17df534300017a44ca3.mockapi.io/movies").then(value => {
+  return async dispatch => {
+    await axios.get("https://6016a17df534300017a44ca3.mockapi.io/movies").then(value => {
       dispatch({
         type: "FETCH_MOVIES",
         payload : value.data,
@@ -11,9 +11,8 @@ export function fetchMovies() {
 }
 
 export function saveMovie(newMovieInfo) {
-  debugger;
-  return dispatch => {
-    axios.post("https://6016a17df534300017a44ca3.mockapi.io/movies", {
+  return async dispatch => {
+    await axios.post("https://6016a17df534300017a44ca3.mockapi.io/movies", {
       name: newMovieInfo._name,
       title: newMovieInfo._title,
       category: newMovieInfo._category,
@@ -28,7 +27,6 @@ export function saveMovie(newMovieInfo) {
       point: newMovieInfo._point,
       platform: "movies"
     }).then(value => {
-      debugger;
       dispatch({
         type: "NEW_MOVIE_RESULT",
         payload: value.statusText
@@ -39,8 +37,8 @@ export function saveMovie(newMovieInfo) {
 
 
 export function editMovie(movieInfo) {
-  return dispatch => {
-    axios.put(`https://6016a17df534300017a44ca3.mockapi.io/${movieInfo._platform}/${movieInfo._id}`, {
+  return async dispatch => {
+    await axios.put(`https://6016a17df534300017a44ca3.mockapi.io/${movieInfo._platform}/${movieInfo._id}`, {
       name: movieInfo._name,
       title: movieInfo._title,
       category: movieInfo._category,
@@ -64,8 +62,8 @@ export function editMovie(movieInfo) {
 }
 
 export function searchMovies(searchText) {
-  return dispatch => {
-    axios.get(`https://6016a17df534300017a44ca3.mockapi.io/movies?name=${searchText}`).then(value => {
+  return async dispatch => {
+    await axios.get(`https://6016a17df534300017a44ca3.mockapi.io/movies?name=${searchText}`).then(value => {
       dispatch({
         type: "SEARCH_MOVIE_RESULT",
         payload: value.data

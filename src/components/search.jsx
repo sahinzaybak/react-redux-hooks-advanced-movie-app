@@ -40,7 +40,7 @@ class search extends PureComponent {
           
           {/* Games search */}
           {this.props.searchListGames.map(searchItem => 
-            <Link to={`/detail/${searchItem.platform}/${searchItem.slug}`} onClick={this.closeSearch} className="search-result__item">
+            <Link to={`/detail/${searchItem.platform}/${searchItem.slug}`} key={searchItem.id} onClick={this.closeSearch} className="search-result__item">
               <div className="d-flex">
                 <img src={searchItem.poster} alt=""/>
                 <div className="d-flex flex-column">
@@ -56,7 +56,7 @@ class search extends PureComponent {
 
         {/* Movie search */}
         {this.props.searchListMovie.map(searchItem => 
-          <Link to={`/detail/${searchItem.platform}/${searchItem.slug}`} onClick={this.closeSearch} className="search-result__item">
+          <Link to={`/detail/${searchItem.platform}/${searchItem.slug}`} key={searchItem.id} onClick={this.closeSearch} className="search-result__item">
             <div className="d-flex">
               <img src={searchItem.poster} alt=""/>
               <div className="d-flex flex-column">

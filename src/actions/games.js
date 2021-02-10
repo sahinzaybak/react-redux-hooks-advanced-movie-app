@@ -1,7 +1,7 @@
 import axios from 'axios'
 export function fetchGames() {
-  return dispatch => {
-    axios.get("https://6016a17df534300017a44ca3.mockapi.io/games").then(value => {
+  return async dispatch => {
+   await axios.get("https://6016a17df534300017a44ca3.mockapi.io/games").then(value => {
       dispatch({
         type: "FETCH_GAMES",
         payload: value.data,
@@ -11,8 +11,8 @@ export function fetchGames() {
 }
 
 export function detail(platform, slug) {
-  return dispatch => {
-    axios.get(`https://6016a17df534300017a44ca3.mockapi.io/${platform}?slug=${slug}`).then(value => {
+  return async dispatch => {
+    await axios.get(`https://6016a17df534300017a44ca3.mockapi.io/${platform}?slug=${slug}`).then(value => {
       dispatch({
         type: "SET_DETAIL",
         payload: value.data[0],
@@ -22,8 +22,8 @@ export function detail(platform, slug) {
 }
 
 export function saveGames(newGameInfo) {
-  return dispatch => {
-    axios.post("https://6016a17df534300017a44ca3.mockapi.io/games", {
+  return async dispatch => {
+    await axios.post("https://6016a17df534300017a44ca3.mockapi.io/games", {
       name: newGameInfo._name,
       title: newGameInfo._title,
       category: newGameInfo._category,
@@ -37,8 +37,6 @@ export function saveGames(newGameInfo) {
       point: newGameInfo._point,
       platform: "games"
     }).then(value => {
-
-      debugger;
       dispatch({
         type: "NEW_GAME_RESULT",
         payload: value.statusText
@@ -48,8 +46,8 @@ export function saveGames(newGameInfo) {
 }
 
 export function editGames(gameInfo) {
-  return dispatch => {
-    axios.put(`https://6016a17df534300017a44ca3.mockapi.io/${gameInfo._platform}/${gameInfo._id}`, {
+  return async dispatch => {
+    await axios.put(`https://6016a17df534300017a44ca3.mockapi.io/${gameInfo._platform}/${gameInfo._id}`, {
       name: gameInfo._name,
       title: gameInfo._title,
       category: gameInfo._category,
@@ -72,9 +70,8 @@ export function editGames(gameInfo) {
 }
 
 export function searchGames(searchText) {
-  return dispatch => {
-    axios.get(`https://6016a17df534300017a44ca3.mockapi.io/games?name=${searchText}`).then(value => {
-      debugger;
+  return async dispatch => {
+    await axios.get(`https://6016a17df534300017a44ca3.mockapi.io/games?name=${searchText}`).then(value => {
       dispatch({
         type: "SEARCH_GAME_RESULT",
         payload: value.data
