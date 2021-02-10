@@ -1,5 +1,5 @@
 # REACT- REDUX MOVIE APP
-React ile yaptığım ilk proje. Açıkçası VueJs bilgim olduğu için React't geçişte çok zorlanmadım, öyle herkesin dediği gibi karışık bir yapısı yokmuş aslında. Syntax farklılığı ve az da  olsa mantığı biraz değişik gelsede yine de sevdim, kolay adapte oldum. Klasik movie app'lerden daha çok, tasarımı özgün, yaratıcı ve animasyonlarla süslediğim güzel bir proje oldu. İlk projem olduğu için bazı yerlerde açıklama satırları bıraktım. 
+React ile yaptığım ilk proje. Açıkçası VueJs bilgim olduğu için React'a geçişte çok zorlanmadım, öyle herkesin dediği gibi karışık bir yapısı yokmuş aslında. Syntax farklılığı ve az da  olsa mantığı biraz değişik gelsede yine de sevdim, kolay adapte oldum. Klasik movie app'lerden daha çok, tasarımı özgün, yaratıcı ve animasyonlarla süslediğim, kod anlamıylada içime sinen güzel bir proje oldu. İlk react projem olduğu için bazı yerlerde açıklama satırları bıraktım. 
 
 
 ## Build Setup
