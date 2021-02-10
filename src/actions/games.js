@@ -69,17 +69,6 @@ export function editGames(gameInfo) {
   }
 }
 
-export function searchGames(searchText) {
-  return async dispatch => {
-    await axios.get(`https://6016a17df534300017a44ca3.mockapi.io/games?name=${searchText}`).then(value => {
-      dispatch({
-        type: "SEARCH_GAME_RESULT",
-        payload: value.data
-      });
-    })
-  }
-}
-
 export function clearDetail() {
   return dispatch => {
       dispatch({

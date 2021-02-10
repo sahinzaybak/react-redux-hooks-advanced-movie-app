@@ -60,14 +60,3 @@ export function editMovie(movieInfo) {
     })
   }
 }
-
-export function searchMovies(searchText) {
-  return async dispatch => {
-    await axios.get(`https://6016a17df534300017a44ca3.mockapi.io/movies?name=${searchText}`).then(value => {
-      dispatch({
-        type: "SEARCH_MOVIE_RESULT",
-        payload: value.data
-      });
-    })
-  }
-}

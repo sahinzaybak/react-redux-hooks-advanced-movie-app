@@ -1,7 +1,6 @@
 const initialState = {
   gameList: [],
   detail:[],
-  searchList:[],
   createGameResult:''
 }
 
@@ -16,11 +15,6 @@ export default (state = initialState, action) => {
       return{
         ...state,
         detail: action.payload
-      }
-    case "SEARCH_GAME_RESULT":
-      return{
-        ...state,
-        searchList: action.payload
       }
     case "EDIT_RESULT":
       return{

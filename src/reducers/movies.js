@@ -1,7 +1,7 @@
 const initialState = {
   movieList: [],
-  searchList:[],
-  createMovieResult:''
+  createMovieResult:'',
+  searchOverlay:''
 }
 
 export default (state = initialState, action) => {
@@ -12,15 +12,11 @@ export default (state = initialState, action) => {
         movieList: action.payload
       }
     case "NEW_MOVIE_RESULT":
-        return{
-          ...state,
-          createMovieResult: action.payload
-        }
-    case "SEARCH_MOVIE_RESULT":
-        return{
-          ...state,
-          searchList: action.payload
-        }
+      return{
+        ...state,
+        createMovieResult: action.payload
+      }
+  
     default:
       return state;
   }
