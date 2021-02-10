@@ -16,9 +16,7 @@ import back from '../assets/images/arrow-left.svg';
 import EditMovie from '../components/editMovie'
 import EditGames from '../components/editGame'
 
-//Peki, Hooks ne zaman kullanılmalı?
-//Eğer fonksiyon Component’lerle çalışıyorsanız ve bir state yönetimine ihtiyaç duyarsanız, o Component’i tekrar bir Class’a çevirmeniz gerekmiyor. Doğrudan Hooks bağlayarak state yönetimi yapabilirsiniz.
-const MovieDetail = ({ detailInfo }) => { //props yerine direk ({detailInfo})
+const MovieDetail = ({ detailInfo }) => { //no props => ({movies})
 const volumeTrailer = 1;
 const volumePosterTrailer = 0.8;
 

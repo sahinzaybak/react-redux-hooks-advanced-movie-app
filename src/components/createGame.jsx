@@ -130,7 +130,7 @@ class CreateGame extends Component {
   
 }
 
-const mapStateToProps = (state) => { //state => state.games --> games bana rootReducerdan geliyor..
+const mapStateToProps = (state) => { 
   return {
     createResult: state.games.createGameResult
   } 

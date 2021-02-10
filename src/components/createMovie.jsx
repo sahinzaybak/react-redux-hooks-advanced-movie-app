@@ -136,7 +136,7 @@ class CreateMovie extends Component {
   }
 }
 
-const mapStateToProps = (state) => { //state => state.movies --> movies bana rootReducerdan geliyor..
+const mapStateToProps = (state) => {
   return {
     createResult: state.movies.createMovieResult
   } 

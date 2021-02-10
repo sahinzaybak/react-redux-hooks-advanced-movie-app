@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import {connect} from 'react-redux' //redux ile bağlantı kurmak için connect gerekli.
+
 //Component
 import Detail from '../components/detail.jsx'
 //Actions
@@ -36,7 +37,7 @@ const mapStateToProps = (state) => { //state => state.games --> games bana rootR
   } 
 }
 
-const mapDispatchToProps = { //this.props.getGameDetail(); propsta tanımlayıp kullanabilmem için props tanımlamamız gerekiyor.
+const mapDispatchToProps = { 
   detail
 }
 

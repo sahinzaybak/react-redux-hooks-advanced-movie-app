@@ -5,7 +5,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import {Link} from 'react-router-dom';
 import ContentLoader from 'react-content-loader'
 
-const gameList = ({ games }) => { //props yerine direk ({games})
+const gameList = ({ games }) => { //no props => ({movies})
 
 return (
   <div className="movie pt-3 pt-md-5 mt-3"> 
@@ -17,7 +17,7 @@ return (
   {games.gameList.length == 0 &&
     <div className="d-flex">
       {[...Array(6)].map((x, i) =>
-        <ContentLoader viewBox="0 0 500 880">
+        <ContentLoader viewBox="0 0 500 880" key={i}>
           <rect x="3" y="3" rx="30" ry="30" width="460" height="700" />
           <rect x="6" y="760" rx="0" ry="0" width="292" height="20" />
        </ContentLoader>

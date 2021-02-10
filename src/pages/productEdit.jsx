@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+
 //Components
 import {connect} from 'react-redux' //redux ile bağlantı kurmak için connect gerekli.
 import EditGame from '../components/editGame'
@@ -10,11 +11,11 @@ class productEdit extends PureComponent {
   render() {
     return (
       <div className="movie-create edit pt-5">
-        {this.props.detailInfo.platform=="games" && 
+        {this.props.detailInfo.platform == "games" && 
           <EditGame detailInfo= {this.props.detailInfo}/>
         }
 
-        {this.props.detailInfo.platform=="movies" && 
+        {this.props.detailInfo.platform == "movies" && 
           <EditMovie detailInfo= {this.props.detailInfo}/>
         }
       </div>

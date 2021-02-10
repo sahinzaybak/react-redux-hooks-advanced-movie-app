@@ -34,18 +34,14 @@ class moviesPage extends PureComponent {
   }
 }
 
-//STATE VERİ ALMA
-//tüm state'deki(rootReducer) movies arraymı aldım ve props gibi kullanmaya başladım. "console.log(this.props)" yazdırırsak "movies[]" olarak görebiliriz.
-const mapStateToProps = (state) => { //state => movies --> movies bana rootReducerdan geliyor..
+const mapStateToProps = (state) => {
   return {
     movies: state.movies,
     games: state.games
   } 
 }
 
-//ACTION ÇAĞIRMA
-//Tanımlama yayıp created props olarak actiona gönderiyorum.
-const mapDispatchToProps = { //this.props.fetchMovies(); propsta tanımlayıp kullanabilmem için props tanımlamamız gerekiyor.
+const mapDispatchToProps = {
   fetchMovies,
   fetchGames,
   clearDetail

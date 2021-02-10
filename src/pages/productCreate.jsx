@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+
 //Components
 import CreateGame from '../components/createGame'
 import CreateMovie from '../components/createMovie'
@@ -25,7 +26,6 @@ class productCreate extends PureComponent {
     componentWillUnmount(){ //component çıkılıyorken
       document.body.classList.remove("header-nobg");
     }
-  
 }
 
 export default productCreate;

@@ -25,7 +25,3 @@ export default (state = initialState, action) => {
       return state;
   }
 }
-
-// buradan sonra rootReducer'a veri basılır otomatik(state)
-
-//https://zaferayan.medium.com/react-native-instagram-redux-kullan%C4%B1m%C4%B1-10e29c8e3f1b

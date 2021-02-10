@@ -71,7 +71,6 @@ export function editGames(gameInfo) {
   }
 }
 
-
 export function searchGames(searchText) {
   return dispatch => {
     axios.get(`https://6016a17df534300017a44ca3.mockapi.io/games?name=${searchText}`).then(value => {
@@ -83,7 +82,6 @@ export function searchGames(searchText) {
     })
   }
 }
-
 
 export function clearDetail() {
   return dispatch => {
