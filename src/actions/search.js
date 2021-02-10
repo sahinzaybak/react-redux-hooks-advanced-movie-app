@@ -40,7 +40,6 @@ export function searchDisableOverlay() {
   }
 }
 
-
 export function searchListClear() {
   return dispatch => {
     dispatch({
