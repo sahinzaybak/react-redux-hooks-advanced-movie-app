@@ -193,6 +193,7 @@ label {
   transform: translateY(50px);
   transition: all .4s ease-in;
   cursor: pointer;
+  z-index: 9;
 }
 
 .activeTrailer {

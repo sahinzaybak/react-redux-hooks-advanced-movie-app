@@ -80,6 +80,9 @@
         object-fit: cover;
         transition: all .8s ease;
         transform: scale(1);
+        @media (max-width: 650px) {
+          display: none;
+        }
       }
       @media (max-width: 650px) {
         margin-top: 10px;
@@ -177,6 +180,10 @@
       object-fit: cover;
       transform: scale(0);
       transition: all .6s ease-in-out;
+      @media (max-width: 650px) {
+        transform: none;
+        opacity: 1;
+      }
 
       div {
         width: 100% !important;

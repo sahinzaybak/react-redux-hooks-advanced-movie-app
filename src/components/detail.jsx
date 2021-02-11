@@ -21,11 +21,13 @@ const volumeTrailer = 1;
 const volumePosterTrailer = 0.8;
 
 const [playingPoster, setPlayPoster] = useState(true) //poster trailer
+const [mobileVideoVolume, setMobileVideoVolume] = useState(0.8) //poster trailer
 const [trailerMuted, setTrailerMuted] = useState(true) //arka plan video ses
 const [isTrailer, setTrailer] = useState(false) //trailer izlemek istiyor mu?
 const [isMute, setIsMute] = useState(false) //trailerdan çıkınca mute aktif mi?
 const [isEdit, setIsEdit] = useState(false) //trailerdan çıkınca mute aktif mi?
- 
+
+
 function toggleMute(){
   setPlayPoster(!playingPoster);
   if(playingPoster) setIsMute(true) // isMute = true
@@ -66,9 +68,16 @@ return (
                 </Link>
                 <div className="movie-detail__poster">
                   <img src={detailInfo.poster} loading="lazy"/>
-                  <div className="movie-detail__spotify">
-                    <ReactPlayer volume={volumePosterTrailer} loop={true} playing={playingPoster} url={detailInfo.music} loading="lazy"/>
-                  </div>
+                  {window.innerWidth > 650  && 
+                    <div className="movie-detail__spotify d-block d-md-none">
+                      <ReactPlayer volume={volumePosterTrailer} loop={true} playing={playingPoster} url={detailInfo.music} loading="lazy"/>
+                    </div>
+                  }
+                  {window.innerWidth < 650  && 
+                    <div className="movie-detail__spotify d-block d-md-none">
+                      <ReactPlayer volume={mobileVideoVolume} loop={true} playing="false" url={detailInfo.music} loading="lazy"/>
+                    </div>
+                  }
                 </div>
               </div>
               <div className="col-md-9">
@@ -103,7 +112,7 @@ return (
                           textColor: '#fff',
                           trailColor: '#0c502f',
                       })} />
-                      <div className={`movie-detail__icon ml-3 cursor-pointer ${isMute ? "opacity" : ""}`} onClick={toggleMute}>
+                      <div className={`movie-detail__icon d-none d-md-flex ml-3 cursor-pointer ${isMute ? "opacity" : ""}`} onClick={toggleMute}>
                         <img src={muted} alt=""/>
                       </div>
                       <div className="d-flex align-items-center cursor-pointer" onClick={() => {
@@ -111,6 +120,7 @@ return (
                           setTrailer(true); 
                           setTrailerMuted(false); 
                           bodyAddClass();
+                          setMobileVideoVolume(0)
                         }}>
                         <div className="movie-detail__icon ml-3 mr-2">
                           <img src={play} alt=""/>
@@ -145,6 +155,7 @@ return (
          setTrailer(false); 
          setTrailerMuted(true);
          bodyRemoveClass()
+         setMobileVideoVolume(0.8)
       }}>
       <img src={up} alt=""/>
     </div>
