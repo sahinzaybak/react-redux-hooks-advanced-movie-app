@@ -1,5 +1,5 @@
 # REACT- REDUX MOVIE APP
-Canlı test linki: https://react-redux-advanced-movie-app.vercel.app/
+Canlı test linki: https://react-redux-advanced-movie-app-duz2oqzak.vercel.app/
 
 Sevdiğiniz filmlerin veya oyunların ruhunu, onların fon müzikleriyle fazlasıyla hissedebilirsiniz, laptopun sesini çok açmayın :)
 Test sayfasından sizde sevdiğiniz film veya oyunları ekleyebilirsiniz.
