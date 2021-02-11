@@ -1,11 +1,14 @@
 # REACT- REDUX MOVIE APP
 Canlı test linki: https://react-redux-advanced-movie-app.vercel.app/
 
-React dünyasına bende girdim :) Açıkçası Vue bilgim olduğu için React'a geçişte çok zorlanmadım, öyle herkesin dediği gibi karışık bir yapısı yokmuş aslında. Syntax farklılığı ve az da olsa mantığı biraz değişik gelsede(redux) yine de sevdim, kolay adapte oldum. Klasik movie app'lerden daha çok, tasarımı özgün, yaratıcı ve animasyonlarla süslediğim, kod anlamıylada içime sinen güzel bir proje oldu.
+Sevdiğiniz filmlerin veya oyunların ruhunu, onların fon müzikleriyle fazlasıyla hissedebilirsiniz, laptopun sesini çok açmayın :)
+Test sayfasından sizde sevdiğiniz film veya oyunları ekleyebilirsiniz.
 
-Projede filmler ve oyunlar listeleniyor. Siz tıklayıp detaya gittiğiniz anda arka planda oyuna yada filme ait fon müziği çalarken bir yandan da arka tarafta oyuna yada filme ait trailer oynuyor, böylece girdiğiniz filmin,oyunun ruhunu her daim hissediyorsunuz :) Bu ahengi kaybetmeden detay bilgilerini düzenleyebilir, fragramana geç butonuna basıp, sadece arkadaki fragmanı görebilir, yada arka planda çalan müziğin sesini kapatabilirsiniz.. Çok uzamasın diye yazmadığım bir çok şey var aslında(search, darkmode, contentloader, lodash-debounce), react ve reduxu tam anlamıyla kullanabilmek için hep yeni bir şeyler eklemek istedim, zorladım biraz kendimi. Zorlamayınca öğrenilmiyor bazı şeyler.
+Açıkçası Vue tecrübem fazla olduğu için React'a geçişte çok zorlanmadım, öyle herkesin dediği gibi karışık bir yapısı yokmuş aslında. Syntax farklılığı ve az da olsa mantığı biraz değişik gelsede(redux) yine de sevdim, kolay adapte oldum. Klasik movie app'lerden daha çok, tasarımı özgün, yaratıcı, animasyonlarla süslediğim ve mobili bir app gibi olan bu proje, kod anlamıyla da içime sinen hoş bir proje oldu.
 
-Projeyi indirip denemek isteyen arkadaşlar olursa .env dosyası için bana Linkedin'den ulaşabilirler. Birde sevdikleri film veya oyunu ekleyebilirler :)
+React ve reduxu tam anlamıyla kullanabilmek adına projeye hep yeni özellikler eklemek istedim, özellikle redux tarafına çok yüklenmeye çalıştım.
+
+Sonuç olarak; React'ı deneyimlemem açısından çok faydalı ve keyifli bir proje oldu benim için, umarım siz de beğenirsiniz.
 
 ## Build Setup
 
