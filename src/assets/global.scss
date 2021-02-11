@@ -208,9 +208,16 @@ label {
   }
 
   .movie-detail__backdrop {
+    @media (max-width: 600px) {
+      z-index: 1;
+    }
     &:after {
       background-color: transparent;
+      @media (max-width: 600px) {
+        display: none;
+      }
     }
+    
   }
 }
 

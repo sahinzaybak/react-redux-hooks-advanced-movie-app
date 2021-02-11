@@ -37,6 +37,7 @@ function isMutePoster(){
   else setPlayPoster(true)
 }
 
+
 //Mobile arka plan trailer için.
 function bodyAddClass(){
   document.body.classList.add("overflow-hidden");
